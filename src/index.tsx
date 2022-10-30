@@ -1,27 +1,12 @@
-import React, { FC } from "react"
+import React from "react"
 import { createRoot } from 'react-dom/client';
-import { RecoilRoot } from "recoil"
-import { BrowserRouter, Route, Routes, useLocation, useParams, Link } from "react-router-dom"
-import { RDFResource } from  "mwe-bug2"
-
-const HomeContainer: FC<{  }> = ({
-}) => {
-  return (
-    <React.Fragment>
-      test !
-    </React.Fragment>
-  )
-}
+import {
+  defaultGraphNode
+} from "mwe-bug2"
 
 function App() {
   return (
-    <BrowserRouter>
-      <RecoilRoot>
-        <Routes>
-              <Route path="/" element={<HomeContainer />} />
-        </Routes>
-      </RecoilRoot>
-    </BrowserRouter>
+    <>{defaultGraphNode.uri}</>
   )
 }
 
